@@ -3,20 +3,22 @@ using namespace std;
 int par[1000006];
 
 //------------------DSU ------------//
-void inint(int n){
-  for(int i=1;i<=n;i++){
+void init(int x){
+  for(int i=1;i<=x;i++){
     par[i]=i;
   }
 }
 
-int rep(int n){
-  if(par[n]==n)return n;
-  return par[n] = rep(par[n]);
+int rep(int x){
+  if(par[x]==x)return n;
+  return par[x] = rep(par[x]);
 }
 void join(int x,int y){
   int a = rep(x);
   int b  = rep(y);
-  if(a!=b)par[a]=b;
+  if(a!=b){
+    par[a]=b;
+  }
 
 }
 ///-----------------DSU ends-------------//
