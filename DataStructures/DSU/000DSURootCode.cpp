@@ -10,7 +10,7 @@ void init(int x){
 }
 
 int rep(int x){
-  if(par[x]==x)return n;
+  if(par[x]==x)return x;
   return par[x] = rep(par[x]);
 }
 void join(int x,int y){
